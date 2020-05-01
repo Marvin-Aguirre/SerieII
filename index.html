@@ -27,7 +27,172 @@
         iv.	Si presiona dividir = divide el mayor de los 3 entre el valor que esta en el medio <br>
 
     </p>
+         <!--Captura de las variables-->
+         <P>Ingresar lo que se le pide en los siguientes campos:</P>
+         <br>
+         <label for="var1">Ingresar el valor de la primer variable:</label><br>
+         <input type="number" id="var1"> <br>
+         <br>
+         <label for="var2">Ingresar el valor de la segunda variable:</label><br>
+         <input type="number" id="var2"><br>
+         <br>
+         <label for="var3">Ingresar el valor de la tercer variable:</label><br>
+         <input type="number" id="var3"><br>
+         <br>
+ 
+         <label for="">Seleccione la operacion que desea realizar con los datos ingresados</label><br>
+         <br>
+         <!--Boton que llamara la funcion sumar-->
+         <input type="button" onclick="sumar()" value="Sumar">
+         <!--Boton que llamara la funcion restar-->
+         <input type="button" onclick="restar()" value="Restar">
+         <!--Boton que llamara la funcion multiplicar-->
+         <input type="button" onclick="multiplicar()" value="Multiplicar">
+         <!--Boton que llamara la funcion dividir-->
+         <input type="button" onclick="dividir()" value="Dividir"><br>
+         <br>
+         <!--Creacion del campo donde se mostrara el reultado-->
+         <label for="">Su resultado es el siguiente: </label>
+         <input type="number" id="resultado">
+         
+         <script>
+            var a,b,c,resultado;
+            
+            function sumar(){
+                a=document.getElementById("var1").value;
+                b=document.getElementById("var2").value;
+                c=document.getElementById("var3").value;
 
+              
+                resultado=a+b+c;
+                document.getElementById("resultado").value = resultado;
+            }
+            function restar(){
+                a=document.getElementById("var1").value;
+                b=document.getElementById("var2").value;
+                c=document.getElementById("var3").value;
+                
+                if(a == ""){
+                    a=0;
+                }else{
+                    a= parseInt(a);
+                }
+                if(b == ""){
+                    b=0;
+                }else{
+                    b= parseInt(b);
+                }
+                
+            
+                if(c == ""){
+                    c=0;
+                }else{
+                    c= parseInt(c);
+                }
+
+                if(a>b&&a>c){
+                    if(b<c){
+                        resultado=a-b}
+                        if(c<b){
+                            resultado=a-c
+                        }
+                    
+                }
+                if(b>a&&b>c){
+                    if(a<c){
+                        resultado=b-a}
+                        if(c<a){
+                            resultado=b-c
+                        }
+                    
+                }
+                if(c>a&&c>b){
+                    if(a<b){
+                        resultado=c-a}
+                        if(b<a){
+                            resultado=c-b
+                        }
+                    
+                }
+                
+                document.getElementById("resultado").value = resultado;
+            }
+            function multiplicar(){
+                a=document.getElementById("var1").value;
+                b=document.getElementById("var2").value;
+                c=document.getElementById("var3").value;
+
+                if(a == ""){
+                    a=0;
+                }else{
+                    a= parseInt(a);
+                }
+                if(b == ""){
+                    b=0;
+                }else{
+                    b= parseInt(b);
+                }
+                
+            
+                if(c == ""){
+                    c=0;
+                }else{
+                    c= parseInt(c);
+                }
+                resultado=a*c;
+                document.getElementById("resultado").value = resultado;
+            }
+            function dividir(){
+                a=document.getElementById("var1").value;
+                b=document.getElementById("var2").value;
+                c=document.getElementById("var3").value;
+                
+                if(a == ""){
+                    a=0;
+                }else{
+                    a= parseInt(a);
+                }
+                if(b == ""){
+                    b=0;
+                }else{
+                    b= parseInt(b);
+                }
+                
+            
+                if(c == ""){
+                    c=0;
+                }else{
+                    c= parseInt(c);
+                }
+
+                if(a>b&&a>c){
+                    if(b<c){
+                        resultado=a/c}
+                        if(c<b){
+                            resultado=a/b
+                        }
+                    
+                }
+                if(b>a&&b>c){
+                    if(a<c){
+                        resultado=b/c}
+                        if(c<a){
+                            resultado=b/a
+                        }
+                    
+                }
+                if(c>a&&c>b){
+                    if(a<b){
+                        resultado=c/b}
+                        if(b<a){
+                            resultado=c/a
+                        }
+                    
+                }
+              
+                document.getElementById("resultado").value = resultado;
+            }
+        </script>
    
         
 </body>
