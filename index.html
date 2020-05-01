@@ -56,22 +56,14 @@
          <input type="number" id="resultado">
          
          <script>
+             //Declaracion de las variables
             var a,b,c,resultado;
-            
+            //Creacion de la funcion sumar
             function sumar(){
                 a=document.getElementById("var1").value;
                 b=document.getElementById("var2").value;
                 c=document.getElementById("var3").value;
-
-              
-                resultado=a+b+c;
-                document.getElementById("resultado").value = resultado;
-            }
-            function restar(){
-                a=document.getElementById("var1").value;
-                b=document.getElementById("var2").value;
-                c=document.getElementById("var3").value;
-                
+                //condicion para detectar campos vacios
                 if(a == ""){
                     a=0;
                 }else{
@@ -89,7 +81,34 @@
                 }else{
                     c= parseInt(c);
                 }
-
+                //Suma de las tres variables ingresadas
+                resultado=a+b+c;
+                document.getElementById("resultado").value = resultado;
+            }
+            //Creacion de la funcion restar
+            function restar(){
+                a=document.getElementById("var1").value;
+                b=document.getElementById("var2").value;
+                c=document.getElementById("var3").value;
+                //condicion para detectar campos vacios
+                if(a == ""){
+                    a=0;
+                }else{
+                    a= parseInt(a);
+                }
+                if(b == ""){
+                    b=0;
+                }else{
+                    b= parseInt(b);
+                }
+                
+            
+                if(c == ""){
+                    c=0;
+                }else{
+                    c= parseInt(c);
+                }
+                //Condiciones para detectar cual es el mayor y menor de las tres variables
                 if(a>b&&a>c){
                     if(b<c){
                         resultado=a-b}
@@ -117,11 +136,12 @@
                 
                 document.getElementById("resultado").value = resultado;
             }
+            //Creacion de la funcion multiplicar
             function multiplicar(){
                 a=document.getElementById("var1").value;
                 b=document.getElementById("var2").value;
                 c=document.getElementById("var3").value;
-
+                //condicion para detectar campos vacios
                 if(a == ""){
                     a=0;
                 }else{
@@ -139,14 +159,16 @@
                 }else{
                     c= parseInt(c);
                 }
+                //Multiplicacion de la variable 1 y 3
                 resultado=a*c;
                 document.getElementById("resultado").value = resultado;
             }
+            //Creacion de la funcion dividir
             function dividir(){
                 a=document.getElementById("var1").value;
                 b=document.getElementById("var2").value;
                 c=document.getElementById("var3").value;
-                
+                //condicion para detectar campos vacios
                 if(a == ""){
                     a=0;
                 }else{
@@ -164,7 +186,7 @@
                 }else{
                     c= parseInt(c);
                 }
-
+                //Condicion que detecta la mayor de las tres variables y la que tiene un valor medio
                 if(a>b&&a>c){
                     if(b<c){
                         resultado=a/c}
